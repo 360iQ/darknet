@@ -1,0 +1,1 @@
+darknet detector demo data/test.data data/yolov4-person-test.cfg ./backup/yolov4-person_1.weights data/test.mp4 -benchmark

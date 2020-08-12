@@ -1,0 +1,1 @@
+darknet detector train data/train.data data/yolov4-person-train.cfg weights/yolov4.conv.137

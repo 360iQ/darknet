@@ -493,9 +493,10 @@ int main(int argc, char **argv)
         run_detector(argc, argv);
     } else if (0 == strcmp(argv[1], "detect")){
         float thresh = find_float_arg(argc, argv, "-thresh", .24);
+        float nms_thresh = find_float_arg(argc, argv, "-nms_threshold", DEFAULT_NMS_THRESHOLD);
 		int ext_output = find_arg(argc, argv, "-ext_output");
         char *filename = (argc > 4) ? argv[4]: 0;
-        test_detector("cfg/coco.data", argv[2], argv[3], filename, thresh, 0.5, 0, ext_output, 0, NULL, 0, 0);
+        test_detector("cfg/coco.data", argv[2], argv[3], filename, thresh, 0.5, nms_thresh, 0, ext_output, 0, NULL, 0, 0);
     } else if (0 == strcmp(argv[1], "cifar")){
         run_cifar(argc, argv);
     } else if (0 == strcmp(argv[1], "go")){

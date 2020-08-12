@@ -1,0 +1,1 @@
+darknet detector map data/test.data data/yolov4-person-test.cfg backup/yolov4-person_1.weights -iou_thresh 0.5
